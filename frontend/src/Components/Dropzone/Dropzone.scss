@@ -1,0 +1,31 @@
+.dropzoneList{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        margin: 0 5px;
+        list-style: none;
+        position: relative;
+    }
+    button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        aspect-ratio: 1;
+        background-color: white;
+        border: none;
+        cursor: pointer;
+    }
+    img{
+        padding: 0 10px;
+    }
+}
+
+#dropzoneForm{
+    textarea{
+        resize: none;
+        width: 100%;
+        padding: 10px;
+        height: 100px;
+        border-color: #bdbdbd;
+    }
+}

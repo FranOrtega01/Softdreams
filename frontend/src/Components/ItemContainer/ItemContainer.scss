@@ -1,0 +1,54 @@
+@import '../../App.scss';
+
+.prodContainer {
+    width: clamp(200px, 90%, 1200px);
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding: 0 15px;
+    container: products / inline-size;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    align-items: start;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    div{
+        overflow: hidden;
+    }
+    img {
+        width: 100%;
+        transition: all 250ms ease;
+        &:hover{
+            scale: 1.2;
+        }
+    }
+    h2{
+        padding: 10px;
+        font-size: 22px;
+    }
+    p{
+        font-size: 18px;
+        padding-left: 10px;
+        color: $text-blue;
+    }
+}
+
+@media(max-width: 900px) {
+    .prodContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .prodContainer {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,64 @@
+@import '../App.scss';
+
+.contactContainer {
+    display: grid;
+    grid-template-areas:
+        "info form"
+        "media form";
+    grid-template-columns: 1fr 1fr;
+    max-width: 100vw;
+    font-size: 18px;
+    width: clamp(200px, 90%, 1200px);
+    margin: 0 auto 50px auto;
+    a,svg {
+        color: black;
+        stroke: black;
+    }
+
+    textarea{
+        resize: none;
+        height: 80px;
+    }
+
+    @media (max-width:800px){
+        grid-template-areas:
+        "info"
+        "form"
+        "media";
+    grid-template-columns:auto;
+    gap: 50px;
+    }
+}
+
+.infoContainer {
+    grid-area: info;
+
+    div {
+        display: flex;
+        gap: 10px;
+        margin: 5px 10px;
+        justify-content: start;
+    }
+}
+
+.mediaContainer {
+    grid-area: media;
+    div{
+        display: flex;
+        gap: 15px;
+        margin: 5px 10px;
+    }
+}
+
+.formContainer {
+    grid-area: form;
+}
+
+.mediaContainer,
+.contactContainer {
+    a:hover{
+        color: $text-blue;
+        stroke: $text-blue;
+
+    }
+}
