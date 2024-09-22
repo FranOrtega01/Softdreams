@@ -29,11 +29,17 @@ app.use(session({
 
 // Cors Config
 const corsOptions = {
-    origin: ["https://illustrious-mooncake-a8026e.netlify.app/"],
+    origin: ["https://illustrious-mooncake-a8026e.netlify.app", "https://illustrious-mooncake-a8026e.netlify.app/", "illustrious-mooncake-a8026e.netlify.app/"],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
     credentials: true,
 };
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');  // Allow your front-end origin
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    next();
+});
 
 app.use(cors(corsOptions));
 
