@@ -1,8 +1,8 @@
 const config = {
-    // backURL: 'https://glorious-appliance-production.up.railway.app',
-    // backAPI: 'https://glorious-appliance-production.up.railway.app/api/admin'
-    backURL: 'http://127.0.0.1:8080',
-    backAPI: 'http://127.0.0.1:8080/api',
+    backURL: 'https://softdreams-api.onrender.com',
+    backAPI: 'https://softdreams-api.onrender.com/api',
+    // backURL: 'http://127.0.0.1:8080',
+    // backAPI: 'http://127.0.0.1:8080/api',
 
     cellphone: "+54 9 11 2253-8982",
     wpp: "https://wa.me/22538982",
