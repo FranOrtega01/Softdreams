@@ -36,7 +36,7 @@ const corsOptions = {
 };
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5173');  // Allow your front-end origin
+    res.setHeader('Access-Control-Allow-Origin', 'https://illustrious-mooncake-a8026e.netlify.app/');  // Allow your front-end origin
     res.setHeader('Access-Control-Allow-Credentials', 'true');
     next();
 });
